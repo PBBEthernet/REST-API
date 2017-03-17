@@ -9,7 +9,7 @@ class Store(Resource):
         return {'messge': 'Storenot found'}, 404
 
     def post(self, name):
-        if StoreModel.find_by_name(name)
+        if StoreModel.find_by_name(name):
             return {'messge': "A store with name '{}' already exists.".format(name)}, 400
         store = StoreModel(name)
         try:
